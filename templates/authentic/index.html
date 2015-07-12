@@ -1,0 +1,60 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title>HOME</title>
+	<meta charset="utf-8" />
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'authentic/style33.css' %}" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body class="body">
+
+	<header class="mainheader">
+		<center><img src="../../static/authentic/sagar.png" style="width:400px;height:100px"></center>
+		
+		
+		<nav><ul>
+			<li><a href = "{% url 'authentic:login'%}">Login</a></li>
+			<li><a href = "{% url 'authentic:register_user' %}">Register </a></li>
+			<li><a href="#">Contact</a></li>
+			<li><a href="#">About</a></li>
+		</ul></nav>
+	</header>
+	
+	<div class="mainContent">
+		<div class="mainContent">
+		<div class="content">
+			<article class="topcontent">
+				<header>
+					<h1 ><center>How Things Work!!!</center></h1>
+				</header>
+				
+				
+				<content>
+					<p>
+						Now chat more with your friends with CHAT ON. We provide you a more sophisticated way to talk to your friends and strangers.
+						Register for you account here for free and then login.
+						Join the chat rooms, make your own chat rooms and have fun.
+						We hope you will enjoy a lot by using this this application.
+					</p>
+					<p>
+						
+						
+					</p>
+				</content>
+			</article>
+	</div>
+	
+	
+
+	
+	<footer class="mainFooter">
+		<p>Copyright &copy: <a href="#" title ="1stwebdesigner">1stwebdesigner.com</a></p>
+	</footer>
+	
+	
+</body>
+</html>

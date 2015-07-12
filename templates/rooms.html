@@ -1,0 +1,44 @@
+
+{% extends "base.html" %}
+{% load staticfiles %}
+{% block extra_js %}
+<script>$(showForm);</script>
+{% endblock %}
+
+{% block main %}
+{% load staticfiles %}
+<head>
+	<p><a href = "{% url 'authentic:logout' %}">Logout</a></p>
+	<h1>CHAT ON</h1>
+   <link rel="stylesheet" type="text/css" href="{% static 'authentic/style13.css' %}" />
+   <link rel="stylesheet" type="text/css" href="{% static 'authentic/style33.css' %}" />
+</head>
+</head>
+<body>
+{% for room in rooms %}
+	<ul>
+    <li><a href="{{ room.get_absolute_url }}">{{ room }}</a>
+	</li>
+	</ul>
+	
+    <ul>
+        {% for user in room.users.all %}
+			<li>{{ user.name }}</li>
+        {% endfor %}
+    </ul>
+
+{% empty %}
+<p>There are currently no rooms! Add one below.</p>
+{% endfor %}
+<br clear="all">
+{% endblock %}
+
+
+{% block form %}
+<form method="post" action="{% url 'authentic:create' %}">
+    <br><input type="text" id="name" name="name">
+    <button>Add Room</button>
+    {% csrf_token %}
+</form>
+{% endblock %}
+</body>

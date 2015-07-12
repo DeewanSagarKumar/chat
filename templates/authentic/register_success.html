@@ -1,0 +1,37 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<title> html5</title>
+	<meta charset="utf-8" />
+	
+	
+	<link rel="stylesheet" type="text/css" href="{% static 'authentic/style33.css' %}" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+</head>
+
+<body class="body">
+
+	<header class="mainheader">
+		
+		
+	</header>
+	
+	<div class="mainContent">
+		<div class="content">
+			 
+			 <p style= " margin-top: 200px;
+    margin-bottom: 100px;
+    margin-right: 150px;
+    margin-left: 100px;"><h1> Hi {{full_name}} You have successfully registered.<br>
+	    First verify the link sent to your email id then you can login. click here  <a href = "{% url 'authentic:login' %} ">to login</a></h1>
+			
+			
+		</div>
+	</div>
+
+	
+	
+</body>
+</html>
