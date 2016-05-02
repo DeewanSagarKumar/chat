@@ -86,6 +86,7 @@ def register_confirm(request, activation_key):
 def register_success(request):
     return render_to_response('authentic/register_success.html')
 
+# check that user is authenticated or not
 def login(request):
     if request.user.is_authenticated():
         #user_profile = get_object_or_404(UserPro, user=request.user)
