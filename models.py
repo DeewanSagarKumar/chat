@@ -18,6 +18,7 @@ class UserPro(models.Model):
             if not self.slug:
                 self.slug = slugify(self.user.username)
             super(UserPro, self).save(*args, **kwargs)
+			print "Ramu"
 
 
 @receiver(post_save,sender=User)
