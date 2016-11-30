@@ -16,6 +16,7 @@ class MyRegistrationForm(UserCreationForm):
     
         if commit:
             user.is_active = False
+			print 'Sagar'
             user.save()
 
         return user
