@@ -14,6 +14,7 @@ from django.core.mail import send_mail
 from django.contrib.auth.views import password_reset, password_reset_confirm, password_reset_complete, password_reset_done
 from forms import MyRegistrationForm
 from django.contrib.auth.models import User
+#SAGAR
 
 def rooms(request, template="rooms.html"):
     """
